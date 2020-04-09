@@ -1,14 +1,14 @@
 ### HELLO WORLD
 
 ## Flow
-'''
+```
 php -> js -> servlet -> js -> php   
 through AJAX
-'''
+```
 
 
 ## js
-'''
+```
 $.ajax({
             url: "servlet/registration.php",
             method: "POST",
@@ -24,10 +24,10 @@ $.ajax({
                 }
             }
         });
-'''
+```
 
 ## servlet
-'''
+```
 $status = "success";
 $data = "none";
 echo json_encode(
@@ -36,12 +36,12 @@ echo json_encode(
         'data' => $data
     )
 );
-'''
+```
 
 ## Database Design
-'''
+```
 ![DB Design](image\DB.PNG)
 
 username: root
 password: toor
-'''
+```
