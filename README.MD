@@ -45,3 +45,21 @@ echo json_encode(
 username: root
 password: toor
 ```
+
+## Email Address
+```
+petlatocomp3421@gmail.com
+Petlato`12
+```
+
+## Test Account 1
+```
+asd
+asd
+```
+
+## Test Account 2
+```
+sdf
+sdf
+```

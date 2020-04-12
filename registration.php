@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="css/registration.css">
 </head>
 <body>
-    <?php include('nav.html');?>
+<?php 
+require_once('nav.php');
+if(isset($_SESSION['user']['user_id'])){
+    header('Location: index.php');
+}
+?>
     <div class="container">
         <h1>Registration Form</h1>
         <form>

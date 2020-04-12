@@ -1,9 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['user'])){
-    header('Location: index.php');
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +7,12 @@ if(isset($_SESSION['user'])){
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <?php include('nav.html');?>
+    <?php 
+        require_once('nav.php');
+        if(isset($_SESSION['user']['user_id'])){
+            header('Location: index.php');
+        }
+    ?>
     <div class="container">
         <h1>Login Page</h1>
         <form>
