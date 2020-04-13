@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('form').submit(function(event){
+    $('#loginform').submit(function(event){
         event.preventDefault();
         //CHECKING
 

@@ -11,47 +11,18 @@
         <h1>My Cart</h1>
     </div>
     <div class="container">
-        <table>
-            <tr>
-                <th>Item Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Total</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-        </table>
-        <button class="clear-cart">Clear Cart</button>
-        <?php
-            // if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
-            //     require_once('servlet/db.php');
-            //     $con = DBConnection();
-            //     $sql = $con->prepare("SELECT * FROM ");
-            //     $sql->bind_param();
-            //     $sql->execute();
-            //     $sql->bind_result();
-            //     $sql->store_reuslt();
-            //     if($sql->num_rows > 0){
-            //         while($sql->fetch()){
+        <div id='table'>
+            <!-- JAVASCRIPT HANDLE-->
+        </div>
+        <div id=button-group>
+            <button class='clear' id='clear'>Clear Cart</button>
+            <button id='checkout'>Chcek Out</button>
+        </div>
+        <div id="message">
 
-            //         }
-            //     }else{
-            //         echo "
-            //             <button id='shopping'>Go to Shopping!</button>
-            //         ";
-            //     }
-            // }else{
-            //     echo "LATER DO LA"; 
-            // }
-        ?>
+        </div>
         <?php
-            if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
-                echo "
-                    <button id='checkout'>Chcek Out</button>
-                ";
-            }else{
+            if(!isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
                 echo "
                     <button id='login-register'>Login/Register</button>
                 ";

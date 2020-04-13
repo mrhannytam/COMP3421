@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <form class="navbar-form navbar-left">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search" name="content-search">
+                    <input type="text" class="form-control" placeholder="Search" name="content_search" id="content_search">
                 </div>
                     <button type="submit" class="btn btn-default"><img src="./image/search.png" height="20" width="20"></button>
             </form>
@@ -42,7 +42,7 @@
                     }
                 ?>
                 <li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notification</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-th-list"></span> My List</a></li>
+                <li><a href="list.php"><span class="glyphicon glyphicon-th-list"></span> My List</a></li>
                 <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>             
             </ul>
         </div>
