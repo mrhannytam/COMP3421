@@ -1,7 +1,12 @@
-.container{
+.banner{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background: gray;
     padding-top: 50px;
 }
 
-.inventory{
-    display: inline;
+#server_inventory{
+    padding-top: 50px;
+    display: flex;
 }

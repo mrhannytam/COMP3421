@@ -58,5 +58,8 @@ CREATE TABLE cart(
 
 INSERT INTO user VALUES('asd', '617615465', '3893fb66a0fdc1e33b7f69b030d8902a171015b61d9d945f26fd37fbb519cbdbd61602d2c4d06976c653db8bf535236e3c0382ff960c3b6b2609810ca8847870', 'asd@asd.asd', 'YES', NULL, '../image/default.png', '0');
 INSERT INTO user VALUES('sdf', '523968815', '79bb26b65aa5c706dd8b469465a2e89da818fec9d6550a18cd19e44ac52503c93e7edc3478446159fa4cbcf7c4e52df16b44721582b75f94fdefe766f977ee4d', 'sdf@sdf.sdf', 'YES', NULL, '../image/sdfcat.png', '0');
-INSERT INTO inventory VALUES(1, "cat food", "./inventory_image/1.jpg", 99.9);
-INSERT INTO inventory VALUES(2, "dog food", "./inventory_image/2.png", 77.9);
+INSERT INTO inventory VALUES(1, "cat food", "../inventory_image/1.jpg", 99.9);
+INSERT INTO inventory VALUES(2, "dog food", "../inventory_image/2.png", 77.9);
+
+use comp3421;
+select * from inventory;

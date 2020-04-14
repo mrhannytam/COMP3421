@@ -14,7 +14,6 @@ $(document).ready(function(){
             success: function(res){
                 res = JSON.parse(res);
                 if(res['status'] === 'success'){
-                    alert("Success!");
                     window.location.href = "index.php";
                 }else{
                     alert("Fail! " + res['data']);

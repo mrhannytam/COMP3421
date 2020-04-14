@@ -15,7 +15,11 @@
             $data = "Cannot delete record in table cart";
         }
     }else{
-        $data = "Haven't login";
+        if(setcookie("cart", "", time() - 3600) && setcookie("quantity", "", time() - 3600)){
+            $status = "success";
+        }else{
+            $data = "Cannot clear the cookie";
+        }
     }
 
     echo json_encode(
