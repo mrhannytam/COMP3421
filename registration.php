@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
+    header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +13,7 @@
     <link rel="stylesheet" href="css/registration.css">
 </head>
 <body>
-<?php 
-require_once('nav.php');
-if(isset($_SESSION['user']['user_id'])){
-    header('Location: index.php');
-}
-?>
+<?php require_once('nav.php');?>
     <div class="container">
         <h1>Registration Form</h1>
         <form>
@@ -42,11 +43,11 @@ if(isset($_SESSION['user']['user_id'])){
             </label>
         </div> -->
         <div>
-            <input type="reset" value="reset">
-            <input type="submit" value="submit">   
+            <input class="btn btn-light" type="reset" value="reset">
+            <input class="btn btn-light" type="submit" value="submit">   
         </div>
         </form>
-        <button class="btn btn-default" id="back">Back</button>
+        <button class="btn btn-light" id="back">Back</button>
     </div>
 </body>
 </html>

@@ -33,21 +33,21 @@ $(document).ready(function(){
                 success: function(res){
                     res = JSON.parse(res);
                     console.log(res['data'][0]);
-                    var $table = $('<table class="table table-light">'); //Create dynamic table
-                    $table.append('<tr><th>Item Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Action</th></tr>');
+                    var $table = $('<table class="table">'); //Create dynamic table
+                    $table.append('<tr><th>Item Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Action</th></tr></thead><tbody>');
                     var total = 0;
                     if(res['status'] === "success"){
                         for(let i = 0; i < res['data'].length; i++){
-                            $table.append("<tr>");
+                            $table.append("<tr");
                             $table.append("<td>" + res['data'][i]['inventory_name'] + "</td>");
                             $table.append("<td>" + res['data'][i]['quantity'] + "</td>");
                             $table.append("<td>" + res['data'][i]['price'] + "</td>");
                             $table.append("<td>" + res['data'][i]['total'] + "</td>");
-                            $table.append("<td>" + "<button " + "class='delete'"+ "id='" + res['data'][i]['inventory_id'] + "'>" + "Delete</button>" + "</td>");
+                            $table.append("<td>" + "<button " + "class='delete btn btn-danger'"+ "id='" + res['data'][i]['inventory_id'] + "'>" + "Delete</button>" + "</td>");
                             $table.append("</tr>");
                             total = total +  res['data'][i]['total'];
                         }
-                        $table.append("<tr><td colspan=3>Total Amout</td><td colspan=2>" + total.toFixed(1) + "</td></tr>");
+                        $table.append("<tr><td colspan=3>Total Amout</td><td colspan=2>" + total.toFixed(1) + "</td></tr></table>");
                         $table.appendTo('#table'); //Append it to HTML
                         $('#button-group').show();
         

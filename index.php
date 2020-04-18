@@ -13,6 +13,9 @@
         }
     ?>
     <div class="container-fluid">
+        <div id="message">
+            <!-- JS HANDLE -->
+        </div>
         <div id="server_inventory">
             <!-- JS HANDLE -->
         </div>

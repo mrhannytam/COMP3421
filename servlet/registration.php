@@ -20,7 +20,7 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email
     //Upload image to server
     if(isset($_FILES['profile_image']['name']) && !empty($_FILES['profile_image']['name'])){
         $upload_directory = '../image/';
-        $file_name = $username . basename($_FILES['profile_image']['name']);
+        $file_name = $username . "." . basename($_FILES['profile_image']['type']);
         $upload_file = $upload_directory . $file_name;
         if(!move_uploaded_file($_FILES['profile_image']['tmp_name'], $upload_file)){
             $data = "Cannot upload profile image"; 

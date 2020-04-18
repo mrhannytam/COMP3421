@@ -3,10 +3,9 @@
     text-align: center;
     font-weight: bold;
     background: gray;
-    padding-top: 50px;
 }
 
 #server_inventory{
-    padding-top: 50px;
+    padding-top: 60px;
     display: flex;
 }

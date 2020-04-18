@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-        url: "./servlet/getPurchase.php",
+        url: "./servlet/getOrderHistory.php",
         method: "POST",
         success: function(res){
             res = JSON.parse(res);
@@ -18,7 +18,7 @@ $(document).ready(function(){
                     $table.append("</tr>");
                 }
                 $table.append("</table>");
-                $table.appendTo('#purchase-list');
+                $table.appendTo('#order-history');
 
 
 

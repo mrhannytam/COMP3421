@@ -15,8 +15,8 @@
             <!-- JAVASCRIPT HANDLE-->
         </div>
         <div id=button-group>
-            <button class='clear' id='clear'>Clear Cart</button>
-            <button id='checkout'>Chcek Out</button>
+            <button class='clear btn btn-danger' id='clear'>Clear Cart</button>
+            <button class='btn btn-success' id='checkout'>Chcek Out</button>
         </div>
         <div id="message">
 
