@@ -1,6 +1,8 @@
 <?php
     $status = "fail";
     $data = "none";
+
+
     require_once('db.php');
     $con = DBConnection();
     $sql = $con->prepare("SELECT * FROM inventory");

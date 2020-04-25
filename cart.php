@@ -16,18 +16,22 @@
         </div>
         <div id=button-group>
             <button class='clear btn btn-danger' id='clear'>Clear Cart</button>
-            <button class='btn btn-success' id='checkout'>Chcek Out</button>
+            <?php
+            if(!isset($_SESSION['user']['user_id']) && empty($_SESSION['user']['user_id'])){
+                echo "
+                    <button class='btn btn-warning' id='login-register'>Login/Register</button>
+                ";
+            }else{
+                echo "
+                    <button class='btn btn-success' id='checkout'>Chcek Out</button>
+                ";
+            }
+            ?>     
         </div>
         <div id="message">
 
         </div>
-        <?php
-            if(!isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
-                echo "
-                    <button id='login-register'>Login/Register</button>
-                ";
-            }
-        ?>
+        
     </div>
 </body>
 </html>

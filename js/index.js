@@ -36,8 +36,9 @@ $(document).ready(function(){
                 res = JSON.parse(res);
                 if(res['status'] === 'success'){
                     $('#server_inventory').empty();
+                    $('#message').empty();
                     for(let i = 0; i < res['data'].length; i++){
-                        var $div = $('<div class="inventory">');
+                        var $div = $('<div class="inventory" onclick="#">');
                         $div.append("<div><a href='./inventory.php?inventory_id=" + res['data'][i]['inventory_id'] + "'><img src='" + res['data'][i]['inventory_image'] + "'  width=100 height=100></a></div>")
                         $div.append("<div class='name'>" + res['data'][i]['inventory_name'] + "</div>");
                         $div.append("<div class='price'>" + res['data'][i]['price'] + "</div>");

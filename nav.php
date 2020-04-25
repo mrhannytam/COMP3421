@@ -14,7 +14,7 @@
                 if(!isset($_SESSION)){ 
                     session_start(); 
                 } 
-                if(isset($_SESSION['user']['user_id'])){
+                if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
                     require_once('servlet/db.php');
                     $con = DBConnection();
                     $sql = $con->prepare('SELECT profile_image FROM user WHERE user_id = ?');
@@ -27,11 +27,12 @@
                         echo '
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="' . substr($profile_image,1) . '" width=20 height=20> Account
+                                    <img src="' . substr($profile_image,1) . '" width=20 height=20> Hello, ' . $_SESSION['user']['user_id'] . '
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="accountSetting.php">Account Setting</a>
                                     <a class="dropdown-item" href="orderHistory.php">Order History</a>
+                                    <a class="dropdown-item" href="reward.php">Reward Gift</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="logout.php">Logout</a>
                                 </div>

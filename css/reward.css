@@ -1,0 +1,11 @@
+#gifts{
+    display: flex;
+}
+
+.gift{
+    padding: 1%;
+}
+
+.own{
+    display: flex;
+}

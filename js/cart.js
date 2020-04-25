@@ -51,8 +51,6 @@ $(document).ready(function(){
                         $table.appendTo('#table'); //Append it to HTML
                         $('#button-group').show();
         
-                    }else if(res['status'] === "fail" && res['data'] === "Haven't register"){
-                        alert("Please register or login first :)");
                     }else if(res['status'] === "fail" && res['data'] === "Nothing added to cart"){
                         $('#message').append("<h1>You haven't add anything in the cart</h1>");
                         $('#message').append("<h1><a href='index.php'>Go shopping!</a></h1>");
@@ -85,8 +83,8 @@ $(document).ready(function(){
                 res = JSON.parse(res);
                 if(res['status'] === 'success'){
                     alert("Check out success");
-                }else{
-                    alert("Please try again later");
+                }else if(res['status'] === 'fail' && res['data'] === "Haven't login"){
+                    alert("Please login first"); 
                 }
             }
         });
