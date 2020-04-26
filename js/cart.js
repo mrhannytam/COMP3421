@@ -37,7 +37,7 @@ $(document).ready(function(){
                     var total = 0;
                     if(res['status'] === "success"){
                         for(let i = 0; i < res['data'].length; i++){
-                            $table.append("<tr");
+                            $table.append("<tr>");
                             $table.append("<td>" + res['data'][i]['inventory_name'] + "</td>");
                             $table.append("<td>" + res['data'][i]['quantity'] + "</td>");
                             $table.append("<td>" + res['data'][i]['price'] + "</td>");
