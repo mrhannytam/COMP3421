@@ -32,7 +32,6 @@ $(document).ready(function(){
                 method: "post",
                 success: function(res){
                     res = JSON.parse(res);
-                    console.log(res['data'][0]);
                     var $table = $('<table class="table">'); //Create dynamic table
                     $table.append('<tr><th>Item Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Action</th></tr></thead><tbody>');
                     var total = 0;
