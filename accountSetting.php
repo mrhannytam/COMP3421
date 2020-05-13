@@ -29,7 +29,7 @@ if(!isset($_SESSION['user']['user_id']) && empty($_SESSION['user']['user_id'])){
         <div>
             <form id="address_form">
                 <textarea rows="6" cols="50" name="address" id="address"></textarea><br>
-                <input class="btn btn-danger" type="reset" value="Ckear">
+                <input class="btn btn-danger" type="reset" value="Clear">
                 <input class="btn btn-success" type="submit" value="Submit">
             </form>
         </div>

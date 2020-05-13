@@ -74,7 +74,6 @@ CREATE TABLE cart(
     FOREIGN KEY(inventory_id) REFERENCES inventory(inventory_id)
 );
 
-
 INSERT INTO user VALUES('asd', '617615465', '3893fb66a0fdc1e33b7f69b030d8902a171015b61d9d945f26fd37fbb519cbdbd61602d2c4d06976c653db8bf535236e3c0382ff960c3b6b2609810ca8847870', 'asd@asd.asd', 'YES', NULL, '../image/default.png', 10000);
 INSERT INTO user VALUES('sdf', '523968815', '79bb26b65aa5c706dd8b469465a2e89da818fec9d6550a18cd19e44ac52503c93e7edc3478446159fa4cbcf7c4e52df16b44721582b75f94fdefe766f977ee4d', 'sdf@sdf.sdf', 'YES', NULL, '../image/sdfcat.png', 0);
 INSERT INTO inventory VALUES(1, "cat food", "./inventory_image/1.jpg", 99.9);
@@ -82,7 +81,5 @@ INSERT INTO inventory VALUES(2, "dog food", "./inventory_image/2.png", 77.9);
 INSERT INTO gift VALUES(1, "10% off", "./gift_image/10PercentOff.jpg", 1000);
 INSERT INTO gift VALUES(2, "20% off", "./gift_image/20PercentOff.jpg", 1500);
 INSERT INTO gift VALUES(3, "50% off", "./gift_image/50PercentOff.jpg", 3000);
+INSERT INTO purchase VALUES(1, 'sdf', 1, 1, 'NO', current_timestamp());
 INSERT INTO comment VALUES(1, 'sdf', 1, 'Good Job', 4, current_timestamp());
-
-use comp3421;
-select * from inventory;

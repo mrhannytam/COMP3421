@@ -7,7 +7,7 @@ $(document).ready(function(){
             if(res['status'] === 'success'){
 
                 var $table = $('<table class="table">'); //Create dynamic table
-                $table.append("<tr><th>Purchase ID</th><th>Inventory ID</th><th>Quantity</th><th>Delivered?</th><th>Purchase Time</th></tr>");
+                $table.append("<tr><th>Purchase ID</th><th>Inventory ID</th><th>Quantity</th><th>Delivered?</th><th>Purchase Time</th><th>Comment!</th></tr>");
                 for(let i = 0; i < res['data'].length; i++){
                     $table.append("<tr>");
                     $table.append("<td>" + res['data'][i]['purchase_id'] + "</td>");
@@ -15,6 +15,7 @@ $(document).ready(function(){
                     $table.append("<td>" + res['data'][i]['quantity'] + "</td>");
                     $table.append("<td>" + res['data'][i]['deliver'] + "</td>");
                     $table.append("<td>" + res['data'][i]['purchase_time'] + "</td>");
+                    $table.append("<td><a href='comment.php?comment_id=" + res['data'][i]['purchase_id'] + "'>" + 'click here' + "</a></td>");
                     $table.append("</tr>");
                 }
                 $table.append("</table>");

@@ -42,7 +42,16 @@ $(document).ready(function(){
                         $('#comment').append('<h3>' + res['data'][i]['user_id'] + '</h3><h4>' + res['data'][i]['comment_time'] + '</h4>');
                         $('#comment').append('</div>');
                         $('#comment').append('<div class="col-9">');
-                        $('#comment').append('<h3>' + res['data'][i]['score'] + '</h3><h4>' + res['data'][i]['comment'] + '</h4>');
+                        $('#comment').append('<div class="star"');
+                        for(let j = 0; j < res['data'][i]['score']; j ++){
+                            $('#comment').append('<span class="fa fa-star checked"></span>');
+                        }
+                        if(res['data'][i]['score'] < 5){
+                            for(let j = 0; j < 5 - res['data'][i]['score']; j++){
+                                $('#comment').append('<span class="fa fa-star"></span>');
+                            }
+                        }
+                        $('#comment').append('</div><h4>' + res['data'][i]['comment'] + '</h4>');
                         $('#comment').append('</div>');
                         $('#comment').append('</div>');
                         $('#comment').append('</div>');
