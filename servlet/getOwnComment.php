@@ -8,7 +8,7 @@
         $con = DBConnection();
 
         $user_id = $_SESSION['user']['user_id'];
-        $comment_id = $_POST['comment_id'];
+        $comment_id = htmlspecialchars(urlencode($_POST['comment_id']));
 
         $sql = $con->prepare("SELECT inventory.inventory_id, inventory_image, comment, score, comment_time FROM inventory, comment 
                               WHERE inventory.inventory_id = (SELECT inventory_id FROM comment WHERE comment_id = ? AND user_id = ?)
@@ -19,6 +19,7 @@
         $sql->store_result();
         $sql->fetch();
         if($sql->num_rows > 0){
+            if($comment == null) $comment = "Have not comment yet";
             $data = array(
                 'inventory_id' => $inventory_id,
                 'inventory_image' => $inventory_image,

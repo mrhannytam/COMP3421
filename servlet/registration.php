@@ -9,9 +9,9 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email
 
     //Checking
     require_once('regex.php');
-    $username = checkUsername($_POST['username']);
-    $password = checkPassword($_POST['password']);
-    $email = checkEmail($_POST['email']);
+    $username = htmlspecialchars(urlencode($_POST['username']));
+    $password = htmlspecialchars(urlencode($_POST['password']));
+    $email = htmlspecialchars($_POST['email']);
     $address = null;
     $reward_balance = 0;
     $active = "NO";

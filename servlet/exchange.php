@@ -5,7 +5,7 @@
 
     if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id']) && isset($_POST['exchange_id']) && !empty($_POST['exchange_id'])){
         $user_id = $_SESSION['user']['user_id'];
-        $exchange_id = $_POST['exchange_id'];
+        $exchange_id = htmlspecialchars(urlencode($_POST['exchange_id']));
         require_once('db.php');
         $con = DBConnection();
 

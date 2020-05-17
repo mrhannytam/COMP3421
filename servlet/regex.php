@@ -14,4 +14,9 @@ function checkImage($text){
 // function checkPromotion($text){
 //     return $text;
 // }
+
+
+
+
+// SERVER SIDE CHECKING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ?>

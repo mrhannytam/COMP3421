@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['key']) && !empty($_GET['key'])){
-    $key = $_GET['key'];
+    $key = htmlspecialchars(urlencode($_GET['key']));
     require_once('db.php');
     $con = DBConnection();
     $sql = $con->prepare("SELECT hash, active FROM user WHERE hash = ?");

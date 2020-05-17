@@ -38,11 +38,11 @@ $(document).ready(function(){
                     for(var i = 0; i < res['data'].length; i++){
                         $('#comment').append('<div class="container">');
                         $('#comment').append('<div class="row">');
-                        $('#comment').append('<div class="col-3"');
+                        $('#comment').append('<div class="col-3">');
                         $('#comment').append('<h3>' + res['data'][i]['user_id'] + '</h3><h4>' + res['data'][i]['comment_time'] + '</h4>');
                         $('#comment').append('</div>');
                         $('#comment').append('<div class="col-9">');
-                        $('#comment').append('<div class="star"');
+                        $('#comment').append('<div class="star">');
                         for(let j = 0; j < res['data'][i]['score']; j ++){
                             $('#comment').append('<span class="fa fa-star checked"></span>');
                         }
@@ -54,7 +54,7 @@ $(document).ready(function(){
                         $('#comment').append('</div><h4>' + res['data'][i]['comment'] + '</h4>');
                         $('#comment').append('</div>');
                         $('#comment').append('</div>');
-                        $('#comment').append('</div>');
+                        $('#comment').append('<br>');
                     }
                 }else if(res['status'] === 'fail' && res['data'] === 'no comment yet'){
                     $('#comment').append('<h2>No Comment Yet</h2>');

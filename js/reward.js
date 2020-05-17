@@ -28,7 +28,7 @@ $(document).ready(function(){
                     div.appendTo('.own_gift');
                 }
             }else{
-                $('own_gift').append("<h3>You don't have any reward</h3>");
+                $('.own_gift').append("<h3>You don't have any reward</h3>");
             }
         }
     });
@@ -50,6 +50,7 @@ $(document).ready(function(){
                     if(res['status'] === 'success'){
                         $('.message').empty();
                         $('.message').append("<h2 class='text-success'>Exchange Success</h2>");
+                        location.reload();
                     }else{
                         $('.message').empty();
                         $('.message').append("<h2 class='text-danger'>Not Enough Points</h2>");

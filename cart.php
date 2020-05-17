@@ -28,6 +28,9 @@
             }
             ?>     
         </div>
+        <div class="own_gift">
+            <!-- JAVASCRIPT HANDLE-->
+        </div>
         <div id="message">
 
         </div>

@@ -6,7 +6,7 @@
     if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id']) && isset($_POST['exchange_id']) && !empty($_POST['exchange_id'])){
         require_once('db.php');
         $con = DBConnection();
-        $exchange_id = $_POST['exchange_id'];
+        $exchange_id = htmlspecialchars(urlencode($_POST['exchange_id']));
 
         $sql = $con->prepare('SELECT gift_name, gift_points FROM gift WHERE gift_id = ?');
         $sql->bind_param("s", $exchange_id);

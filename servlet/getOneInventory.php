@@ -5,7 +5,7 @@
     if(isset($_POST['inventory_id']) && !empty($_POST['inventory_id'])){
         require_once('db.php');
         $con = DBConnection();
-        $inventory_id = $_POST['inventory_id'];
+        $inventory_id = htmlspecialchars(urlencode($_POST['inventory_id']));
 
 
         $sql = $con->prepare("SELECT inventory_name, inventory_image, price FROM inventory WHERE inventory_id = ?");

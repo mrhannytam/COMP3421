@@ -5,10 +5,12 @@
 
     if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
         $purchase_id = 0; //Left for DB handle
+        $comment_id = 0; //Left for DB handle
+        $score = 0;
         $user_id = $_SESSION['user']['user_id'];
         $deliver = "NO";
         $purchase_time = time();    
-
+        if(isset($_POST['coupon']) && !empty($_POST['coupon'])) $coupon_id = htmlspecialchars(urlencode($_POST['coupon']));
 
         require_once('db.php');
         $con = DBConnection();
@@ -27,11 +29,26 @@
                     if(!$sql->execute()){
                         $data = "Cannot delete recod in cart";
                     break;
+                    }
+
+                    $sql = $con->prepare("INSERT INTO comment VALUES(?, ?, ?, NULL, NULL, NULL)"); //INSERT into table comment
+                    $sql->bind_param("sss", $comment_id, $user_id, $inventory_id);
+                    if(!$sql->execute()){
+                        $data = "Cannot insert into comment";
+                        break;
+                    }
+                    
+                    $sql = $con->prepare("UPDATE user SET reward_balance = reward_balance + ((SELECT price FROM inventory WHERE inventory_id = ?) * ?)"); //UPDATE reward balance
+                    $sql->bind_param("ss", $inventory_id, $quantity);
+                    if(!$sql->execute()){
+                        $data = "Cannot update reward balance";
+                        break;
                     }else{
                         $status = "success";
                     }
                 }else{
                     $data = "Cannot insert into table purchase";
+                    break;
                 }
             }
             

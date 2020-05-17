@@ -6,7 +6,6 @@ $(document).ready(function(){
         success: function(res){
             res = JSON.parse(res);
             if(res['status'] === 'success'){
-                console.log(res['data']);
                 $('#profile_image').attr("src", res['data'].substring(1));
             }            
         }
@@ -36,10 +35,10 @@ $(document).ready(function(){
                 res = JSON.parse(res);
                 if(res['status'] === 'success'){
                     $('#message').empty();
-                    $('#message').append("<h1>Upload Image Success!</h1>");
+                    $('#message').append("<h1 class='text-success'>Upload Image Success!</h1>");
                 }else{
                     $('#message').empty();
-                    $('#message').append("<h1>Upload Image Failed! " + res['data'] + "</h1>");
+                    $('#message').append("<h1 class='text-danger'>Upload Image Failed! " + res['data'] + "</h1>");
                 }
             }
         });
@@ -59,10 +58,10 @@ $(document).ready(function(){
                 res = JSON.parse(res);
                 if(res['status'] === 'success'){
                     $('#message').empty();
-                    $('#message').append("<h1>Update Address Success!</h1>");
+                    $('#message').append("<h1 class='text-success'>Update Address Success!</h1>");
                 }else{
                     $('#message').empty();
-                    $('#message').append("<h1>Update Address Failed! " + res['data'] + "</h1>");
+                    $('#message').append("<h1 class='text-danger'>Update Address Failed! " + res['data'] + "</h1>");
                 }
             }
         });

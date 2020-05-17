@@ -40,6 +40,7 @@ else if(isset($_GET['comment_id']) && !empty($_GET['comment_id'])){
             <!-- JS HANDLE -->
         </div>
         <div class="comment_form_area">
+        Yours Comment:<br>
             <form id="comment_form">
                 <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
                 <input class="btn btn-danger" type="reset" value="Clear">

@@ -5,9 +5,9 @@
     if(isset($_POST['inventory_id']) && !empty($_POST['inventory_id'])){
         require_once('db.php');
         $con = DBConnection();
-        $inventory_id = $_POST['inventory_id'];    
+        $inventory_id = htmlspecialchars(urlencode($_POST['inventory_id']));    
     
-        $sql = $con->prepare("SELECT user_id, comment, score, comment_time FROM comment WHERE inventory_id = ? ORDER BY comment_time DESC");
+        $sql = $con->prepare("SELECT user_id, comment, score, comment_time FROM comment WHERE inventory_id = ? AND comment IS NOT NULL ORDER BY comment_time DESC");
         $sql->bind_param("s", $inventory_id);
         $sql->execute();
         $sql->bind_result($user_id, $comment, $score, $comment_time);

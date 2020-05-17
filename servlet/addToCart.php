@@ -7,10 +7,11 @@ if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])
 && isset($_POST['inventory_id']) && !empty($_POST['inventory_id']) 
 && isset($_POST['quantity']) && !empty($_POST['quantity'])){
 
-    $inventory_id = $_POST['inventory_id'];
+    $inventory_id = htmlspecialchars(urlencode($_POST['inventory_id']));
     $cart_id = 0;  //Database auto increment handle
     $user_id = $_SESSION['user']['user_id'];
-    $quantity = $_POST['quantity'];
+    $quantity = htmlspecialchars(urlencode($_POST['quantity']));
+    if($quantity <= 0) $quantity = 0;
     
     require_once('db.php');
     $con = DBConnection();

@@ -9,7 +9,7 @@
         $con = DBConnection();
 
         $user_id = $_SESSION['user']['user_id'];
-        $inventory_id = $_POST['inventory_id'];
+        $inventory_id = htmlspecialchars(urlencode($_POST['inventory_id']));
 
         $sql = $con->prepare("DELETE FROM cart WHERE user_id = ? AND inventory_id = ?");
         $sql->bind_param("ss", $user_id, $inventory_id);

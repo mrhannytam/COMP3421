@@ -4,8 +4,8 @@ $data = "none";
 
 if(isset($_POST['username']) && isset($_POST['password']) && !empty($_POST['username']) && !empty($_POST['password'])){
     //CHECKING
-    $user_id = $_POST['username'];
-    $password = $_POST['password'];
+    $user_id = htmlspecialchars(urlencode($_POST['username']));
+    $password = htmlspecialchars(urlencode($_POST['password']));
 
     //Connect to Database
     require_once('db.php');
