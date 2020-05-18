@@ -13,7 +13,18 @@
     <div class="container">
         <div id="comment">
             <h1>Comment</h1>
-            <!-- JS HANDLE -->
+            <div class="content">
+            <div class="row">
+                <div class="col-4">
+                    <!-- JS HANDLE -->
+                </div>
+                <div class="col-8">
+                    <div class="star">
+                         <!-- JS HANDLE -->
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
     <div class="message">
