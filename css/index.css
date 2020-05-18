@@ -12,7 +12,8 @@
 
 
 div.inventory{
-    border: 1px solid black;
+    background: #fafafa;  /* fallback for old browsers */
+    color: black;
     padding: 5px;
     height: 200px;  
     width: 150px; 
@@ -48,3 +49,6 @@ div.name,div.price{
     } 
 }
 
+body{
+    background-color: whitesmoke;
+}
