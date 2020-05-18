@@ -9,3 +9,42 @@
     padding-top: 60px;
     display: flex;
 }
+
+
+div.inventory{
+    border: 1px solid black;
+    padding: 5px;
+    height: 200px;  
+    width: 150px; 
+}
+div.inventory a{
+    margin: 20px;
+}
+div.name,div.price{
+    padding-top: 10px;
+}
+
+
+@media (max-width:320px){
+    div.container-fluid{
+        padding-left: 9px;
+    } 
+}
+
+@media (min-width:321px){
+    div.container-fluid{
+        padding-left: 25px;
+    } 
+}
+@media (min-width:321px){
+    div.container-fluid{
+        padding-left: 30px;
+    } 
+}
+
+@media (min-width:400px){
+    div.container-fluid{
+        padding-left: 55px;
+    } 
+}
+

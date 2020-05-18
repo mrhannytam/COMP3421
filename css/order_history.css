@@ -1,0 +1,35 @@
+div.message a {
+    display: block;
+    width: 150px;
+    margin: auto; 
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width:540px){
+    nav{
+        width:153%;
+    }
+}
+
+@media (min-width:360px){
+    h1{
+        font-size:15px;
+    } 
+}
+
+@media (min-width:540px){
+    h1{
+        font-size:30px;
+    } 
+}
+@media (min-width:485px){
+    h1{
+        font-size:20px;
+    } 
+}

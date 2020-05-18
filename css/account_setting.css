@@ -1,19 +1,18 @@
-.container{
-    padding-top: 50px;
+
+@media (max-width:540px){
+    textarea{
+    width:100%;
+    }
+    #upload_image{
+        width: 60%;
+    }
+    container .btn{
+        width: 30%;
+    }
 }
 
-div.form-group input{
-    width:300px;
-}
-div form{
-    border: 1px solid black;
-    
-}
-div input.btn{
-    margin: 10px;
-}
-div.form-group {
-    margin-left: 10px;
+h1{
+    text-align: center;
 }
 
 .btn.btn-light {

@@ -1,0 +1,16 @@
+@media (max-width:540px){
+    #search_bar{
+        width: 80%;
+    } 
+}
+.nav-item::after{
+    content:'';
+    display:block;
+    width:0px;
+    height:2px;
+    background:white;
+    transition: 0.2s;
+}
+.nav-item:hover::after{
+    width:100%;
+}
