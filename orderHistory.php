@@ -9,6 +9,7 @@ if(!isset($_SESSION['user']['user_id']) && empty($_SESSION['user']['user_id'])){
     <?php require_once('HEADER.php')?>
     <title>Order History</title>
     <script src="./js/orderHistory.js"></script>
+    <link rel="stylesheet" href="css/order_history.css">
 </head>
 <body>
 <?php include('nav.php');?>

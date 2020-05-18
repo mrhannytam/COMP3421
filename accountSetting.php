@@ -9,6 +9,7 @@ if(!isset($_SESSION['user']['user_id']) && empty($_SESSION['user']['user_id'])){
     <?php require_once('HEADER.php')?>
     <title>Account Setting</title>
     <script src="./js/accountSetting.js"></script>
+    <link rel="stylesheet" href="css/account_setting.css">
 </head>
 <body>
 <?php include('nav.php');?>
