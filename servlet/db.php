@@ -9,4 +9,5 @@ function DBConnection(){
 }
 
 echo $con = DBConnection();
+echo 'hi';
 ?>
