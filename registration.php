@@ -16,7 +16,7 @@ if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
 <?php require_once('nav.php');?>
     <div class="container">
         <h1>Registration Form</h1>
-        <form>
+        <form autocomplete="off">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="username" class="form-control" id="username" name="username" placeholder="Username">
@@ -24,10 +24,6 @@ if(isset($_SESSION['user']['user_id']) && !empty($_SESSION['user']['user_id'])){
         <div class="form-group">
             <label for="password">Passord</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="password2">Confirmed Password</label>
-            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password">
         </div>
         <div class="form-group">
             <label for="email">Email</label>

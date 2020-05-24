@@ -15,7 +15,7 @@
     ?>
     <div class="container">
         <h1>Login Page</h1>
-        <form id="loginform">
+        <form id="loginform" autocomplete="off">
             <div>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="username">

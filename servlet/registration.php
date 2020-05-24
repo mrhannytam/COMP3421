@@ -2,7 +2,10 @@
 $status = "fail";
 $data = "none";
 
-if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])){
+if($_SERVER['REQUEST_METHOD'] == 'POST' && 
+isset($_POST['username']) && !empty($_POST['username']) && 
+isset($_POST['password']) && !empty($_POST['password']) && 
+isset($_POST['email']) && !empty($_POST['email'])){
     //Connect to database
     require_once('db.php');
     $con = DBConnection();
