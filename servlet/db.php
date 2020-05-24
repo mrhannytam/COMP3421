@@ -8,5 +8,5 @@ function DBConnection(){
     return $con;
 }
 
-$con = DBConnection();
+echo $con = DBConnection();
 ?>
