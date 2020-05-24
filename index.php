@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Petlato</title>
     <?php require("HEADER.php");?>
     <script src="./js/index.js"></script>
     <link rel="stylesheet" href="css/index.css">

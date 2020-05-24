@@ -1,6 +1,6 @@
 <?php
 function DBConnection(){
-    $host = "den1.mysql2.gear.host";
+    $host = "lolcahost";
     $user = "petlato";
     $password = "Vz4i~S-T3Ps4";
     $database = "petlato";
