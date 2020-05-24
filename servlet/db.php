@@ -7,4 +7,6 @@ function DBConnection(){
     $con = mysqli_connect($host, $user, $password, $database);
     return $con;
 }
+
+$con = DBConnection();
 ?>
