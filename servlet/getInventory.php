@@ -2,7 +2,7 @@
     $status = "fail";
     $data = "none";
 
-    require_once('db.php');
+    require_once('./db.php');
     $con = DBConnection();
 
     if(!$con){
@@ -32,9 +32,6 @@
             $data = "Shop haven't start yet";
         }
     }
-    
-    
-    
 
 
     echo json_encode(
