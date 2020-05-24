@@ -4,7 +4,13 @@
 
     require_once('db.php');
     $con = DBConnection();
-    if(!$con->error){
+
+    if(!$con){
+        echo "Error: Unable to connect to MySQL." . PHP_EOL;
+        echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+        echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+        exit;
+    }else{
         $sql = $con->prepare("SELECT * FROM inventory");
         $sql->execute();
         $sql->bind_result($inventory_id, $inventory_name, $inventory_image, $price);
@@ -26,6 +32,8 @@
             $data = "Shop haven't start yet";
         }
     }
+    
+    
     
 
 
