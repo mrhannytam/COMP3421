@@ -62,7 +62,7 @@ isset($_POST['email']) && !empty($_POST['email'])){
         if($mail->send()){
             $status = "success";
         }else{
-            $data = "Cannot send verify email";
+            $data = "Cannot send verify email" . $mail->ErrorInfo;
         }
         
     }else{
