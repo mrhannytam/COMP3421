@@ -58,7 +58,7 @@ isset($_POST['email']) && !empty($_POST['email'])){
         $mail->addAddress($email);
         $mail->Subject = "[Email Verification] Petlato New User";
         $mail->Body = "Please click this link to verify your account.\n" . 
-        "<a href='http://localhost/petlato/servlet/emailVerify.php?key=$password'>Click Here </a>";
+        "<a href='http://localhost/servlet/emailVerify.php?key=$password'>Click Here </a>";
         if($mail->send()){
             $status = "success";
         }else{
